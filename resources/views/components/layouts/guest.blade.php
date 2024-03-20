@@ -8,8 +8,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     @vite('resources/css/app.css')
 </head>
-<body>
-
+<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+    {{ $slot }}
 @vite('resources/js/app.js')
 </body>
 </html>
