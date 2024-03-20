@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PlatformController;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,8 @@ Route::get('/', IndexController::class)->middleware('guest')->name('index');
 // -----------------------------------------------------------------------------
 // Google authentication routes
 // -----------------------------------------------------------------------------
+Route::get('/auth/google', Auth\Google\RedirectController::class)->name('auth.google');
+Route::get('/auth/google/callback', Auth\Google\CallbackController::class)->name('auth.google.callback');
 
 // -----------------------------------------------------------------------------
 // Authenticated Routes
