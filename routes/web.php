@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 // -----------------------------------------------------------------------------
 // Landing Page
 // -----------------------------------------------------------------------------
-Route::get('/', IndexController::class)->middleware('guest')->name('index');
+Route::get('/', IndexController::class)->middleware('guest')->name('home');
+
+Route::get('/logout', Auth\LogoutController::class)->name('logout');
 
 // -----------------------------------------------------------------------------
 // Google authentication routes

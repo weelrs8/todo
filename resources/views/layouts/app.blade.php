@@ -9,7 +9,12 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-
+<header>
+    <div>
+        <a href="{{ route('logout') }}">Logout</a>
+    </div>
+</header>
+    {{ $slot }}
 @vite('resources/js/app.js')
 </body>
 </html>
